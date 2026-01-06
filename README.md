@@ -183,7 +183,7 @@ Algonive_Lms/
 
 ```env
 PORT=5000
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/lms?retryWrites=true&w=majority
+MONGO_URI=YOUR_MONGODB_URI
 JWT_SECRET=your_super_secret_jwt_key_min_32_characters
 CLOUDINARY_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
