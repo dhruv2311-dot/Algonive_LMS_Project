@@ -1,19 +1,51 @@
 # Learning Management System (LMS)
 
-A complete, production-ready Learning Management System built with the MERN stack (MongoDB, Express.js, React, Node.js).
+A complete, production-ready Learning Management System built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring an **Enterprise Neo-Brutalist** design system.
 
-## Features
+## ✨ Features
 
 - 🔐 **JWT Authentication** - Secure user authentication and authorization
 - 👥 **Role-Based Access** - Student and Admin/Instructor roles
 - 📚 **Course Management** - Create, read, update, and delete courses
 - 🎯 **Progress Tracking** - Track student progress and completion status
 - ☁️ **Cloudinary Integration** - Image upload and storage
-- 🎨 **Dark/Light Theme** - Modern UI with theme toggle
+- 🎨 **Enterprise Neo-Brutalist UI** - Modern, professional design system
 - 📱 **Responsive Design** - Mobile-friendly interface
 - 🔒 **Protected Routes** - Route protection based on authentication and roles
+- 📊 **Analytics Dashboard** - Comprehensive platform statistics (Admin)
+- 💼 **Enterprise-Ready** - Professional, internship-acceptable design
 
-## Tech Stack
+## 🎨 Design System
+
+### Neo-Brutalist Enterprise Theme
+
+This LMS features a refined **Neo-Brutalist** design that balances bold aesthetics with enterprise usability:
+
+#### Design Principles
+- **Clean Typography** - Bold, readable fonts without excessive decoration
+- **Selective Shadows** - Hard offset shadows (6px 6px 0) on primary cards only
+- **Refined Borders** - 2px borders on main containers for structure
+- **Minimal Accents** - Status colors (green, amber, red, blue) for indicators only
+- **Data-First** - Prioritizes readability and long-term usability
+- **Professional** - Corporate-appropriate, internship-ready appearance
+
+#### Visual Elements
+- ⚫⚪ **Black & White Dominance** - Primary color scheme
+- 📦 **Rectangular Shapes** - No rounded corners
+- 🎯 **Hard Shadows** - Offset shadows without blur (cards only)
+- 🔲 **2px Borders** - Clean, refined borders on containers
+- 🔵🟢🟡🔴 **Status Dots** - Small 2x2px colored indicators
+- 📏 **Comfortable Spacing** - 16-32px gaps for breathability
+
+#### Components
+- **Stat Cards** - Dashboard metrics with selective shadows
+- **Course Cards** - Clean, scannable course information
+- **Forms** - Professional inputs without shadows
+- **Buttons** - Flat, rectangular with subtle hover states
+- **Navigation** - Clean navbar with 2px border
+- **Section Headers** - Black background reserved for headers
+
+## 🛠️ Tech Stack
 
 ### Backend
 - Node.js
@@ -29,10 +61,11 @@ A complete, production-ready Learning Management System built with the MERN stac
 - React (Vite)
 - React Router DOM
 - Axios
-- Context API (Authentication & Theme)
-- CSS (Custom Styling with Dark/Light Theme)
+- Context API (Authentication)
+- Tailwind CSS (Enterprise Neo-Brutalist Design)
+- React Icons
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 Algonive_Lms/
@@ -76,23 +109,23 @@ Algonive_Lms/
     │   │   ├── Profile.jsx
     │   │   ├── MyCourses.jsx
     │   │   ├── CourseProgress.jsx
-    │   │   ├── AddCourse.jsx
-    │   │   ├── ManageCourses.jsx
-    │   │   └── Analytics.jsx
+    │   │   ├── AddCourse.jsx (Admin)
+    │   │   ├── ManageCourses.jsx (Admin)
+    │   │   └── Analytics.jsx (Admin)
     │   ├── context/
-    │   │   ├── AuthContext.jsx
-    │   │   └── ThemeContext.jsx
+    │   │   └── AuthContext.jsx
     │   ├── services/
     │   │   └── api.js
     │   ├── App.jsx
-    │   ├── App.css
+    │   ├── App.css          # Enterprise Neo-Brutalist Design System
     │   └── main.jsx
     ├── index.html
     ├── vite.config.js
+    ├── tailwind.config.js
     └── package.json
 ```
 
-## Setup Instructions
+## 🚀 Setup Instructions
 
 ### Prerequisites
 
@@ -177,20 +210,7 @@ Algonive_Lms/
    npm run build
    ```
 
-## Environment Variables
-
-### Backend (.env)
-
-```env
-PORT=5000
-MONGO_URI=YOUR_MONGODB_URI
-JWT_SECRET=your_super_secret_jwt_key_min_32_characters
-CLOUDINARY_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
-```
-
-## API Endpoints
+## 🔌 API Endpoints
 
 ### Authentication
 - `POST /api/auth/register` - Register a new user
@@ -214,7 +234,7 @@ CLOUDINARY_API_SECRET=your_api_secret
 ### Analytics (Admin only)
 - `GET /api/analytics` - Get platform analytics (Protected, Admin)
 
-## User Roles
+## 👥 User Roles
 
 ### Student
 - Register and login
@@ -223,16 +243,18 @@ CLOUDINARY_API_SECRET=your_api_secret
 - Track course progress
 - Update profile
 - View enrolled courses
+- Monitor completion status
 
 ### Admin/Instructor
 - All student features
-- Create courses
+- Create courses with images
 - Manage courses (edit/delete)
 - Upload course images to Cloudinary
 - View platform analytics
 - See total students, courses, enrollments
+- Track completion rates
 
-## Features Explained
+## 💡 Features Explained
 
 ### Authentication
 - JWT-based authentication
@@ -246,20 +268,52 @@ CLOUDINARY_API_SECRET=your_api_secret
 - Images uploaded to Cloudinary automatically
 - Course CRUD operations
 - Student enrollment tracking
+- Course image management
 
 ### Progress Tracking
 - Progress percentage (0-100%)
 - Status (In Progress / Completed)
 - Visual progress bars
 - Progress updates
+- Completion tracking
 
-### Theme System
-- Dark and light theme toggle
-- Theme preference saved in localStorage
-- Smooth theme transitions
-- Modern UI/UX design
+### Design System
+- Enterprise Neo-Brutalist aesthetic
+- Refined 2px borders
+- Selective hard shadows (6px 6px 0)
+- Clean, professional typography
+- Status indicators with minimal colors
+- Data-first approach
+- Long-session friendly
 
-## Deployment
+## 🎨 Design Documentation
+
+For detailed design system information, see:
+- `ENTERPRISE_REFINEMENTS.md` - Complete design refinement guide
+
+### CSS Classes
+
+#### Buttons
+```css
+.btn              /* Base button with 2px border */
+.btn-primary      /* Black background, white text */
+.btn-secondary    /* White background, black text */
+```
+
+#### Cards
+```css
+.card             /* White card with 2px border, 6px shadow */
+.stat-card        /* Dashboard stat card with shadow */
+```
+
+#### Utilities
+```css
+.shadow-brutal    /* 6px 6px 0 shadow */
+.border-brutal    /* 2px black border */
+.section-header   /* Black background header */
+```
+
+## 🚀 Deployment
 
 ### Backend Deployment (Heroku, Railway, Render)
 
@@ -274,24 +328,28 @@ CLOUDINARY_API_SECRET=your_api_secret
 2. Deploy the `dist` folder
 3. Set API URL in environment variables
 
-## Notes
+## 📝 Notes
 
-- This is a production-ready project built for real-world use
+- Production-ready project built for real-world use
 - Follows industry best practices
 - Clean architecture and scalable structure
-- Modern UI/UX with dark/light theme
+- Enterprise Neo-Brutalist UI design
 - Fully responsive design
 - Comprehensive error handling
+- Internship/portfolio ready
+- Professional, corporate-appropriate design
 
-## License
+## 📄 License
 
 This project is built for internship/educational purposes.
 
-## Support
+## 🤝 Support
 
 For issues or questions, please check the code comments or documentation.
 
 ---
 
-**Built with ❤️ using MERN Stack**
+**Built with ❤️ using MERN Stack + Enterprise Neo-Brutalist Design**
+
+**Design Philosophy:** "Neo-Brutalist, but make it enterprise" - Bold without being aggressive, structured without being rigid, modern without being experimental.
 
