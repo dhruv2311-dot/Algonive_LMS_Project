@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-black font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Enterprise Neo-Brutalist Buttons - Refined */
+  .btn {
+    @apply px-6 py-3 font-bold uppercase tracking-wide border-2 border-black transition-all duration-150 focus:outline-none;
+    /* No shadow on buttons - cleaner look */
+  }
+
+  .btn:hover {
+    @apply bg-gray-50;
+  }
+
+  .btn:active {
+    @apply bg-gray-100;
+  }
+
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+
+  .btn-primary:hover {
+    @apply bg-gray-900;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-black;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-gray-50;
+  }
+
+  .btn-danger {
+    @apply bg-black text-white;
+  }
+
+  .btn:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  /* Enterprise Cards - Primary containers only */
+  .card {
+    @apply bg-white border-2 border-black p-6 transition-all duration-150;
+    box-shadow: 6px 6px 0 #000000;
+  }
+
+  .card:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 5px 5px 0 #000000;
+  }
+
+  /* Dashboard Stat Cards - Selective shadow */
+  .stat-card {
+    @apply bg-white border-2 border-black p-6 transition-all duration-150;
+    box-shadow: 6px 6px 0 #000000;
+  }
+
+  .stat-card:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 5px 5px 0 #000000;
+  }
+
+  /* Status Colors - Strict usage for badges/alerts only */
+  .status-success {
+    @apply bg-green-500;
+  }
+
+  .status-warning {
+    @apply bg-amber-500;
+  }
+
+  .status-error {
+    @apply bg-red-500;
+  }
+
+  .status-info {
+    @apply bg-blue-500;
+  }
+
+  /* Form Styles - Clean, no shadows */
+  .form-input,
+  .form-textarea,
+  .form-select {
+    @apply w-full px-4 py-3 border-2 border-black focus:outline-none focus:border-gray-900 bg-white text-black font-normal;
+    /* No shadow on inputs */
+  }
+
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-select:focus {
+    @apply ring-2 ring-gray-900 ring-offset-0;
+  }
+
+  .form-label {
+    @apply block mb-2 font-bold text-black text-sm;
+    /* Removed uppercase and tracking for better readability */
+  }
+
+  .form-group {
+    @apply mb-6;
+  }
+
+  .form-error {
+    @apply text-red-600 text-sm mt-2 font-semibold;
+  }
+
+  /* Alert Styles - Status colors only */
+  .alert {
+    @apply p-4 border-2 mb-4 font-semibold;
+    /* No shadow on alerts */
+  }
+
+  .alert-success {
+    @apply bg-green-100 border-green-500 text-green-900;
+  }
+
+  .alert-error {
+    @apply bg-red-100 border-red-500 text-red-900;
+  }
+
+  .alert-info {
+    @apply bg-blue-100 border-blue-500 text-blue-900;
+  }
+
+  /* Clean Headings - Functional, not decorative */
+  .heading-system {
+    @apply font-bold tracking-normal;
+    /* Removed uppercase and tight tracking */
+  }
+
+  /* Selective Shadow Utilities - Use sparingly */
+  .shadow-brutal {
+    box-shadow: 6px 6px 0 #000000;
+  }
+
+  .shadow-brutal-sm {
+    box-shadow: 4px 4px 0 #000000;
+  }
+
+  .shadow-brutal-lg {
+    box-shadow: 8px 8px 0 #000000;
+  }
+
+  /* Border Utilities - Refined thickness */
+  .border-brutal {
+    @apply border-2 border-black;
+  }
+
+  .border-brutal-thick {
+    @apply border-3 border-black;
+  }
+
+  /* Section Headers - Black background reserved */
+  .section-header {
+    @apply bg-black text-white p-4 border-2 border-black font-bold text-lg;
+  }
+
+  /* Data Table Styles - High contrast, scannable */
+  .data-table {
+    @apply w-full border-2 border-black;
+  }
+
+  .data-table th {
+    @apply bg-gray-100 border-b-2 border-black p-3 text-left font-bold text-sm;
+  }
+
+  .data-table td {
+    @apply border-b border-gray-300 p-3 text-sm;
+  }
+
+  /* Status Badge - Accent colors only here */
+  .status-badge {
+    @apply inline-block px-3 py-1 text-xs font-bold uppercase border-2;
+  }
+
+  .status-badge-success {
+    @apply bg-green-500 text-white border-green-600;
+  }
+
+  .status-badge-warning {
+    @apply bg-amber-500 text-white border-amber-600;
+  }
+
+  .status-badge-error {
+    @apply bg-red-500 text-white border-red-600;
+  }
+}
